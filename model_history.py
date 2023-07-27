@@ -2,6 +2,13 @@ import pandas as pd
 #import json
 import datetime
 # this piece of code will add the mode artiact had model history into a data frame 
+try:
+    print("no error")
+except exception as err:
+       print(err)
+       print("Error appear in the code")
+
+
 class ModelVersioning:
     def __init__(self, trained_model):
         self.trained_model = trained_model
@@ -19,6 +26,7 @@ class ModelVersioning:
         df_params['model_name'] = "ML Model"
         df_params['model_type'] = "Classification"
         return df_params
+
 
 
 

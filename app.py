@@ -27,7 +27,11 @@ X, y = load_iris(return_X_y=True)
 clf = LogisticRegression(random_state=0).fit(X, y)
 
 
-
+try:
+    print("no error")
+except exception as err:
+       print(err)
+       print("Error appear in the code")
 model = xgboost.XGBClassifier().fit(X_train, y_train)
 clf.predict(X[:2, :])
 predict = model.predict(X_test)
